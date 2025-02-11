@@ -2,7 +2,8 @@ import { db } from '@vercel/postgres';
 import { invoices, customers, revenue, users } from '../lib/placeholder-data';
 
 const client = await db.connect();
-var bcrypt = require('bcryptjs');
+/* eslint-disable */
+const bcrypt = require('bcryptjs');
 
 async function seedUsers() {
   await client.sql`CREATE EXTENSION IF NOT EXISTS "uuid-ossp"`;
